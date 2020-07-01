@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Luna Tecnologia</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<link rel="shortcut icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
+
+	<!-- Font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
+
+
+	<link href="common-css/ionicons.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<link href="03-comming-soon/css/styles.css" rel="stylesheet">
+
+	<link href="03-comming-soon/css/responsive.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div id="id01" class="w3-modal w3-animate-opacity">
+    	<div class="w3-modal-content w3-card-4">
+			<header class="w3-container w3-white">
+				<span onclick="document.getElementById('id01').style.display='none'" style="right: 2px; z-index: 1000; background: transparent;"
+				class="w3-button w3-large w3-display-topright">&times;</span>
+			</header>
+			<div class="w3-container">
+				<div class="slideshow-container" style="padding-top: 30px;">
+					<!-- Full-width images with number and caption text -->
+					<div class="mySlides fade">
+						<div class="numbertext">1 / 2</div>
+						<img src="images/1.png" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 2</div>
+						<img src="images/2.png" style="width:100%">
+					</div>
+
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)" style="left: -15px;">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)" style="right: -15px;">&#10095;</a>
+				</div>
+				<br>
+
+				<!-- The dots/circles -->
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+				</div>
+			</div>
+    	</div>
+  </div>
+
+	<div class="main-area center-text" style="background-image:url(images/teste.png);">
+
+		<div class="display-table">
+			<div class="display-table-cell">
+
+				<div class="main-logo">
+					<img src="images/AP-1.png" alt="luna-tecnologia">
+				</div>
+
+				<div class="subtitle">
+					<p class="desc font-white" style="text-align: justify;"> Somos uma empresa de Tecnologia da Informação sediada em São Luís/MA. Oferecemos serviços de
+						consultoria e assessoria em TI e trabalhamos em regime de Fábrica de Software! Nosso website está em construção,
+						mas já estamos aguardando seu contato através das nossas redes sociais.</p>
+				</div>
+
+				<div class="send-email">
+					<a class="notify-btn" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black" href="#"><b>Sobre nós</b></a>
+				</div>
+				
+				<div class="bottom-button">
+					<ul class="social-btn font-white">
+						<li><a href="https://www.facebook.com/lunatecnologia1" target="_blank">facebook</a></li>
+						<li><a href="https://www.linkedin.com/company/lunatecnologia" target="_blank">linkedin</a></li>
+						<li><a href="https://www.instagram.com/lunatecnologia" target="_blank">instagram</a></li>
+						<li><a href="https://wa.me/5598985697079" target="_blank">whatsapp</a></li>
+						<li><a href="https://t.me/lunatecnologia" target="_blank">telegram</a></li>
+						<li><a href="mailto:contato@lunatecnologia.com.br" target="_blank">email</a></li>
+					</ul><!-- social-btn -->
+				</div>
+			</div><!-- display-table -->
+		</div><!-- display-table-cell -->
+	</div><!-- main-area -->
+
+</body>
+
+<script type="text/javascript">
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+</html>
